@@ -95,3 +95,19 @@ function getSurahs() {
         })
 }
 getSurahs();
+
+
+scrollBtn =  document.querySelector('.scroll-btn');
+window.addEventListener("scroll", function() {
+    if (window.scrollY > 500) {
+        scrollBtn.classList.add('active');
+    } else {
+        scrollBtn.classList.remove('active');
+    }
+});
+scrollBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+});
